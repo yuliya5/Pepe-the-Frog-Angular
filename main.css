@@ -1,13 +1,8 @@
 body *{
-
+	color: #423737;
 }
-
 header{
-	height: 20%;
-	background-color: grey;
-}
-.content{
-
+	height: 10rem;
 }
 .md-button.md-fab {
   line-height: 5.6rem;
@@ -16,6 +11,47 @@ header{
   height: 5.6rem;
   border-radius: 50%;
 }
-.post{
-	height: 50px;
+md-card{
+	margin: 0 0;
 }
+md-card:nth-child(1){
+	background-color: #E65100;
+}
+md-card:nth-child(2){
+	background-color: #FF6F00;
+}
+md-card:nth-child(3){
+	background-color: #F57F17;
+}
+md-card:nth-child(4){
+	background-color: #F9A825;
+}
+md-card:nth-child(5){
+	background-color: #FBC02D;
+}
+md-card:nth-child(6){
+	background-color: #FDD835;
+}
+md-card:nth-child(7){
+	background-color: #FFEB3B;
+}
+md-card:nth-child(8){
+	background-color: #FFEE58;
+}
+md-card:nth-child(9){
+	background-color: #FFF176;
+}
+md-card:nth-child(10){
+	background-color: #FFF59D;
+}
+md-card:nth-child(11){
+	background-color: #FFF9C4;
+}
+md-card:nth-child(12){
+	background-color: #FFFDE7;
+}
+md-card:nth-child(n+12){
+	background-color: white;
+}
+
+
