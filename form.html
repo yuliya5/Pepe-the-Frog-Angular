@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app='peppitControllers'>
+  <head>
+<script 
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.js"></script>
+<link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
+  </head>
+  <body>
+
+    
+   
+  <form ng-submit="submit(NewPost)" ng-controller="submitCtrl">
+    <div>
+      <input type="title" ng-model="title" name="text" /> 
+    </div>
+    <div>
+      <input type="content" ng-model="content" name="text" />
+    </div>
+    <div>
+      <input type="tags" ng-model="tags" name="text" />
+    </div>
+    <div>
+    <input type="submit" id="submit" value="Submit Content" />  
+    </div>
+    
+    
+   
+    
+    
+    
+    
+
+    <pre>title={{title}}</pre>
+    <pre>content={{content}}</pre>
+    <pre>tags={{tags}}</pre>
+    <pre>posts={{posts}}</pre>
+  </form>
+
+
+  </body>
+   <script type="text/javascript" src="controller.js"></script>
+</html>
