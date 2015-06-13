@@ -1,0 +1,21 @@
+body *{
+
+}
+
+header{
+	height: 20%;
+	background-color: grey;
+}
+.content{
+
+}
+.md-button.md-fab {
+  line-height: 5.6rem;
+  min-width: 0;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}
+.post{
+	height: 50px;
+}
