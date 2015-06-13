@@ -2,7 +2,16 @@ body *{
 	color: #423737;
 }
 header{
-	height: 10rem;
+	background-image: url('img/landscape.jpg');
+	background-repeat: no-repeat;
+	height: 20rem;
+	background-size: 100%;
+  background-position-y: -440px;
+}
+#submissionButton{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
 .md-button.md-fab {
   line-height: 5.6rem;
@@ -24,8 +33,12 @@ header{
 	max-height: 500px;
 }
 
-.open-post{
+.post-action{
 	cursor: pointer;
+	transition: color 0.5s ease;
+}
+.post-action:hover{
+	color: black;
 }
 md-content{
 	min-height: 1000px;

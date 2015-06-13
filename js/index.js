@@ -9,7 +9,153 @@ angular.module('MyApp', ['ngMaterial'])
  controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdUtil, $log, $rootScope) {
 
 	$scope.toggleRight = buildToggler('right');
-	$rootScope.posts = [{}];
+	$rootScope.posts = [
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "shark.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "bane.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of three things",
+			user: "anime.png"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "hair.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "sad.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "regal.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "slowpoke.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "smug.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "phone.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "shark.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "rana.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "smug.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "hair.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "slowpoke.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "shark.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of two things",
+			user: "sad.jpg"
+		},
+		{
+			content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque sapiente voluptates possimus est odit laboriosam architecto, atque ratione aut perspiciatis iste ullam unde dolore alias soluta, inventore laborum eaque?",
+			karma: 1,
+			tags: ["newpost", "firstpost"],
+			timeStamp: "1434235036372",
+			title: "This is an example post of 1 thing",
+			user: "regal.jpg"
+		},
+	];
+
+	$scope.upvote = function(post){
+		post.karma++;
+	};
+
+	$scope.downvote = function(post){
+		post.karma--;
+	};
+
 	$scope.posts = $rootScope.posts;
 	function buildToggler(navID) {
     var debounceFn =  $mdUtil.debounce(function(){
@@ -133,14 +279,21 @@ angular.module('MyApp', ['ngMaterial'])
 		$scope.content = [];
 		$scope.tags = 'tags';
 
-
+		$scope.cancel = function(){
+			$scope.newPost = {};
+			$mdSidenav('right').close()
+        .then(function () {
+          $log.debug("close RIGHT is done");
+        });
+		}
     $scope.submit = function() {
 	    $scope.newPost.user = pep[randomNumber];
 	    $scope.newPost.karma = 1;
 	    $scope.newPost.timeStamp = Date.now();
 
 	    $rootScope.posts.push($scope.newPost);
-	    console.log($scope.posts)
+
+	    $scope.newPost = {};
 	    $mdSidenav('right').close()
         .then(function () {
           $log.debug("close RIGHT is done");

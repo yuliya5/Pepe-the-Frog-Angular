@@ -9,33 +9,33 @@
 	</head>
 
 	<body>
-
 	<div ng-controller="AppCtrl" layout="column" ng-app="MyApp">
 		<header>
-			<md-button ng-click="toggleRight()"
-            class="md-primary">
-            Toggle right
-          </md-button>
+
 		</header>
 
 		<md-content class="post-list">
-			<md-card class="post" ng-repeat="item in posts">
+			<md-button id="submissionButton" class="md-fab md-mini" aria-label="Eat cake" ng-click="toggleRight()">
+        </md-button>
+			<md-card class="post" ng-repeat="item in posts | orderBy:'-karma'">
 			 <md-card-content>
 				<div layout="row">
 					<div flex="10">
 						<i class="material-icons">receipt</i>
 					</div>
+					<div flex="10">
+						<img ng-src="{{ 'img/assets/' + item.user }}" alt="">
+					</div>
 					<div flex="50" ng-bind="item.title"></div>
-					<i flex="5" class="material-icons">thumb_up</i>
-					<i flex="5" class="material-icons">thumb_down</i>
-					<i flex="5" class="material-icons open-post" ng-click="togglePost(item)">expand_more</i>
+					<i flex="5" class="material-icons post-action" ng-click="upvote(item)">thumb_up</i>
+					<i flex="5" class="material-icons post-action" ng-click="downvote(item)">thumb_down</i>
+					<i flex="5" class="material-icons post-action open-post" ng-click="togglePost(item)">expand_more</i>
 				</div>
 				<div class="slider" ng-class="{ 'opened': item.open }">
 					<br>
 					<md-card>
 					 <md-card-content>
-					   <h2>Card headline</h2>
-					   <p>Card content</p>
+					   <p ng-bind="item.content"></p>
 					 </md-card-content>
 					 <div class="md-actions" layout="row" layout-align="end center">
 					   <md-button>Comment</md-button>
@@ -59,10 +59,9 @@
 	                   ng-model="newPost.title" md-sidenav-focus>
 	          </md-input-container>
 	          <md-input-container>
-	            <label for="title">Content</label>
-	            <input type="textarea" id="content"
-	                   ng-model="newPost.content">
-	          </md-input-container>
+						  <label>Content</label>
+						  <textarea ng-model="newPost.content"></textarea>
+						</md-input-container>
 	          <md-input-container>
 	            <label for="title">Tags</label>
 	            <input type="text" id="tags"
@@ -70,6 +69,7 @@
 	          </md-input-container>
 	        </form>
 	        <md-button class="md-raised md-accent" ng-click="submit()">Submit</md-button>
+	        <md-button class="md-raised" ng-click="cancel()">Cancel</md-button>
 	      </md-content>
 	    </md-sidenav>
 		</md-content>
